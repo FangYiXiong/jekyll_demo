@@ -4,23 +4,21 @@
   {% include head.html %}
 
   <body>
-
-    <span class="mobile btn-mobile-menu">
-        <i class="fa fa-list btn-mobile-menu__icon"></i>
-        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
-    </span>
+    {% include header.html %}
     
-    {% include side-panel.html %}
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner">
-            {{ content }}
-            {% include footer.html %}
-        </div>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </div>
+
+    {% include footer.html %}
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     
-    {% include external.html %}
-    
+    <script src="//lab.lepture.com/github-cards/widget.js"></script>
+    <script type="text/javascript" src='{{ "js/icons.js" | prepend: site.baseurl }}'></script>
+    <script type="text/javascript" src='{{ "js/index.js" | prepend: site.baseurl }}'></script>
   </body>
 
 </html>
